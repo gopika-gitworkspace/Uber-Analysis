@@ -211,6 +211,8 @@ Users can right-click on a data point from other visuals (e.g., charts, heatmaps
 Displays detailed records related to the selected data point.
 
 
+
+
 Table descriptions
 
 Trip Details Table
