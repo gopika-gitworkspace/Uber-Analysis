@@ -210,3 +210,67 @@ Users can right-click on a data point from other visuals (e.g., charts, heatmaps
 
 Displays detailed records related to the selected data point.
 
+
+Table descriptions
+
+Trip Details Table
+
+The Trip Details Table captures individual Uber trip records and provides detailed information about each ride, including trip timing, distance, fare, pickup/drop-off data, and more. This table enables deep analysis of ride patterns, demand fluctuations, vehicle usage, and passenger behaviors.
+
+
+
+Trip ID: Unique identifier for each trip, used for tracking and referencing individual rides.
+
+
+Pickup Time / Drop Off Time: Timestamp values recording when a ride started and ended. These help compute total ride duration, support time-based analysis (e.g., peak hours), and distinguish between day and night trips.
+
+
+Pickup Date: Extracted from the Pickup Time. Useful for daily trip trend analysis.
+
+
+Trip type (Day/Night): Categorizes each trip based on pickup time into “Day Trip” or “Night Trip.” Useful for identifying temporal patterns in ride demand.
+
+
+Pickup Hour (HH MM SS) & Pickup Hour (bins): Represent the exact and binned pickup time for hourly grouping. Useful in hourly trip demand visualization.
+
+
+Passenger Count: Number of passengers in the vehicle for each trip. Supports studies on ride-sharing behavior and vehicle utilization.
+
+
+Trip Distance: Distance traveled (in miles), used for fare estimation, operational efficiency analysis, and mapping ride lengths.
+
+
+PULocationID / DOLocationID: Numerical IDs representing pickup and drop-off locations. These IDs link to the Location Table for mapping to actual geographic areas.
+
+
+Dropoff Location: Derived from DOLocationID; provides the neighborhood name of the trip’s destination.
+
+
+Fare Amount: The base fare charged, excluding surge and additional fees. Key metric for revenue analysis.
+
+
+Surge Fee: Additional charge during high-demand periods. Helps in surge pricing and peak-demand pattern recognition.
+
+
+Vehicle: Indicates the Uber service type (e.g., UberX). Useful in market segmentation and customer preference studies.
+
+
+Payment Type: Method of payment (e.g., Cash), useful for financial reporting and user behavior analysis.
+
+
+Location Table
+
+
+
+The Location Table contains geographical information that links numerical location IDs to actual named areas or neighborhoods, specifically within the borough of Queens in this dataset. Each entry in the table includes a unique LocationID, the corresponding Location (neighborhood or area name), and the City (which is consistently "Queens" for all rows shown).
+
+
+
+LocationID: A unique numeric identifier for each pickup or drop-off location. It is used as a key to link location data with trip records from the Trip Details table.
+
+
+Location: The name of the neighborhood or area in Queens where pickups and drop-offs occur (e.g., Jamaica Bay, Astoria, Bayside).
+
+
+City: The borough name—"Queens" for every entry shown—which supports further geographical analysis.
+
